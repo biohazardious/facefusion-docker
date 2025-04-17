@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu24.04
+FROM nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
 
 ARG FACEFUSION_VERSION=3.1.2
 ENV GRADIO_SERVER_NAME=0.0.0.0
@@ -7,7 +7,7 @@ ENV PIP_BREAK_SYSTEM_PACKAGES=1
 WORKDIR /facefusion
 
 RUN apt-get update
-RUN apt-get install python3.12 -y
+RUN apt-get install python3.11 -y
 RUN apt-get install python-is-python3 -y
 RUN apt-get install pip -y
 RUN apt-get install git -y
